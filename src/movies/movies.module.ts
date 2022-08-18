@@ -4,6 +4,7 @@ import { MoviesResolver } from './movies.resolver';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
+import { PrismaService } from '../prisma/services/prisma.service';
 
 @Module({
   imports: [
@@ -15,6 +16,6 @@ import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
     }),
   ],
-  providers: [MoviesResolver, MoviesService],
+  providers: [MoviesResolver, MoviesService, PrismaService],
 })
 export class MoviesModule {}

@@ -58,16 +58,10 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Migration name convention
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+* Create a new table: `create_tableName_table`
+* Add a new column: `add_columnName_to_tableName_table`
+* Rename column: `update_columnName_to_tableName_table`
+* Remove a column: `remove_columnName_from_tableName_table`
+* Drop a table: `drop_tableName_table`
