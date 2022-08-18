@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { MoviesService } from './movies.service';
+import { MoviesService } from './services/movies.service';
 import { MoviesResolver } from './movies.resolver';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CreateMovieInput } from './dto/create-movie.input';
-import { Movie } from './models/movie.model';
+import { CreateMovieInput } from '../dto/create-movie.input';
+import { Movie } from '../models/movie.model';
 
 @Injectable()
 export class MoviesService {
