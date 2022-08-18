@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
+import { MovieCreateInput } from '../../@generated/movie';
 import { PrismaService } from '../../prisma/services/prisma.service';
 
 @Injectable()
 export class MoviesService {
   constructor(private readonly prisma: PrismaService) {}
 
-  async createOne(data: Prisma.MovieCreateInput) {
+  async createOne(data: MovieCreateInput) {
     return await this.prisma.movie.create({ data });
   }
 

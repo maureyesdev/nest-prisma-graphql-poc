@@ -1,14 +1,13 @@
-import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql';
+import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
+import { Movie, MovieCreateInput } from '../@generated/movie';
 import { MoviesService } from './services/movies.service';
-import { Movie } from './models/movie.model';
-import { CreateMovieInput } from './dto/create-movie.input';
 
 @Resolver(() => Movie)
 export class MoviesResolver {
   constructor(private readonly moviesService: MoviesService) {}
 
   @Mutation(() => Movie)
-  createMovie(@Args('data') data: CreateMovieInput) {
+  createMovie(@Args('data') data: MovieCreateInput) {
     return this.moviesService.createOne(data);
   }
 
