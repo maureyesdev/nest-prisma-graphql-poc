@@ -1,5 +1,10 @@
 import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
-import { Movie, MovieCreateInput } from '../@generated/movie';
+import {
+  Movie,
+  MovieCreateInput,
+  MovieUpdateInput,
+  MovieWhereUniqueInput,
+} from '../@generated/movie';
 import { MoviesService } from './services/movies.service';
 
 @Resolver(() => Movie)
@@ -14,5 +19,18 @@ export class MoviesResolver {
   @Query(() => [Movie], { name: 'movies' })
   getMovies() {
     return this.moviesService.getMany();
+  }
+
+  @Mutation(() => Movie)
+  updateMovie(
+    @Args('id') { id }: MovieWhereUniqueInput,
+    @Args('data') data: MovieUpdateInput,
+  ) {
+    return this.moviesService.updateOne({ id }, data);
+  }
+
+  @Mutation(() => Movie)
+  deleteMovie(@Args('id') { id }: MovieWhereUniqueInput) {
+    return this.moviesService.deleteOne({ id });
   }
 }

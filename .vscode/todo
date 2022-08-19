@@ -1,8 +1,51 @@
 ✔ add graphql
-☐ add prisma
-☐ generate validation for prisma models
+✔ add prisma
+✔ generate validation for prisma models
 ☐ divide prisma models into separate files
 ☐ organize prisma
+☐ add better error handling for graphql
 
 ☐ Add serverless framework
 ☐ Add local stack
+
+Only users with admin role are allowed to perform the following actions:
+  ✔ Add a movie
+  ✔ Modify a movie
+  ☐ Remove a movie from available list
+  ✔ Delete a movie
+☐ Movies must have a title, description, at least one image, stock, rental price, sale price and availability.
+☐ Availability is a field of movies, which may only be modified by an admin role.
+☐ Save a log of the title, rental price and sale price updates for a movie.
+☐ Users can rent and buy a movie. For renting functionality you must keep track when the user have to return the movie and apply a monetary penalty if there is a delay.
+☐ Keep a log of all rentals and purchases (who bought, how many, when).
+☐ Users can like movies.
+☐ As an admin I'm able to see all movies and filtering by availability/unavailability.
+☐ As an user I'm able to see only the available movies for renting or buying.
+☐ The list must be sortable by title (default), and by popularity (likes).
+☐ The list must have pagination functionality.
+☐ Search through the movies by name.
+
+☐ Add login/logout functionality.Preferably JWT.
+☐ Only admins can add/modify/remove movies.
+☐ Only logged in users can rent and buy movies.
+☐ Only logged in users can like movies.
+☐ Everyone (authenticated or not) can get the list of movies.
+☐ Everyone (authenticated or not) can get the detail of a movie.
+☐ Publish your work using heroku andsharethe link with us.
+
+☐ Recovery and forgot password functionality (send email).
+☐ Confirming account (send email)
+☐ Build a small frontend app and connecting to the API.
+☐ As an user with admin role I want to be able to change the role of any user.
+☐ Unit test, at least 80% of coverage.
+☐ Include a dockerfile for production deployments.
+
+You are free to use any package, library and weapons for the battle as long as you can justify their use.
+You may use any kind of database you like.
+Provide a database dump so we can replicate the database locally.
+POSTMAN will be used to evaluate the API. It would be great if you can provide us with a collection to test your API.
+Follow best RESTful API practices. Take a look on this guidehttps://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+Use git and do small commits to facilitate the evaluation of progress.
+Include areadme.mdfile with instructions on how to setup your project locally to test it. (This is super important, if we cannot install it and run it easily we cannot evaluate it).
+Upload your solutionto your Github or Gitlab accountand share a link with your evaluator.
+The test has been designed with enough time to do a good job, so don’t cut any corners, take your time and watch for quality. We evaluatecode readability, comments, formatting, performance and re-usability.

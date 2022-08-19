@@ -1,0 +1,6 @@
+-- AlterTable
+ALTER TABLE "movies" ALTER COLUMN "stock" DROP NOT NULL,
+ALTER COLUMN "stock" SET DEFAULT 0,
+ALTER COLUMN "rental_price" DROP NOT NULL,
+ALTER COLUMN "sale_price" DROP NOT NULL,
+ALTER COLUMN "is_available" DROP NOT NULL;

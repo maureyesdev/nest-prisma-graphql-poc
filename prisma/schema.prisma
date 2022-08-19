@@ -18,6 +18,13 @@ generator nestgraphql {
 }
 
 model Movie {
-  id    Int    @id @default(autoincrement())
-  title String
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  stock       Int?     @default(0)
+  rentalPrice Float?   @default(0) @map("rental_price")
+  salePrice   Float?   @default(0) @map("sale_price")
+  isAvailable Boolean? @default(false) @map("is_available")
+
+  @@map("movies")
 }
