@@ -28,3 +28,14 @@ model Movie {
 
   @@map("movies")
 }
+
+model User {
+  id        Int       @id @default(autoincrement())
+  /// @Validator.IsEmail()
+  email     String
+  password  String 
+  createdAt DateTime? @default(now()) @map("created_at")
+  updatedAt DateTime? @default(now()) @map("updated_at")
+
+  @@map("users")
+}
